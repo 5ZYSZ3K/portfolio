@@ -65,7 +65,7 @@
                         <p class="heading">O MNIE</p>
                         <div id="image">
                             <div id="img">
-                                <img src="assets/ryj.jpg" alt="xD">
+                                <img src="assets/zdj.jpg" alt="xD">
                             </div>
                         </div>
                         <div id="aboutme">
@@ -166,7 +166,7 @@
                         </div>
                         <div class="project">
                             <div class='overlay'>
-                                <img src="assets/tetris3d.png" />
+                                <img src="assets/tetris3d.PNG" />
                             </div>
                             <p>Tetris 3D, stworzony na szkolny konkurs aplikacji w C#, w którym zająłem 3 miejsce<br>Wykorzystane technologie: Unity, C#</p>
                             <div class="button">
@@ -177,12 +177,12 @@
                         </div>
                         <div class="project">
                             <div class='overlay'>
-                                <img src="assets/portfolio.png" />
+                                <img src="assets/portfolio.PNG" />
                             </div>
                             <p>Projekt mojego portfolio<br>Wykorzystane technologie: HTML, CSS, JavaScript, PHP</p>
                             <div class="button">
                                 <div class="buttonin">
-                                    <a href="#">Repozytorium</a>
+                                    <a href="https://github.com/5ZYSZ3K/portfolio">Repozytorium</a>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                     <div id='second-row' class='project-row'>
                         <div class="project">
                             <div class='overlay'>
-                                <img src="assets/tetris3d.png" />
+                                <img src="assets/tetris3d.PNG" />
                             </div>
                             <p>Aplikacja Guess The Footballer na adnroida<br>Wykorzystane technologie: Java, Android Studio</p>
                             <div class="button">
@@ -201,7 +201,7 @@
                         </div>
                         <div class="project">
                             <div class='overlay'>
-                                <img src="assets/tetris3d.png" />
+                                <img src="assets/tetris3d.PNG" />
                             </div>
                             <p>Zdalnie sterowany pojazd, stworzony razem z bratem<br>Technologie wykorzystane: C</p>
                             <div class="button">
@@ -214,12 +214,11 @@
                 </section>
                 <section id="contact">
                     <p class="heading">KONTAKT</p>
-                    <div id="contact-wrapper">
-                        <input type="email" placeholder="email" />
-                        <br>
-                        <textarea placeholder="wiadomość"></textarea>
-                        <br>
-                        <input type="submit" />
+                    <form id="contact-wrapper" action="contact.php" method="post">
+                        <input type="email" placeholder="email" name="email" />
+                        <input type="text" name="subject" placeholder="temat" />
+                        <textarea name="message" placeholder="wiadomość"></textarea>
+                        <input type="submit" name="submit" />
                     </div>
                 </section>
             </main>

@@ -377,12 +377,13 @@ nav .third2{
     background-color: rgba(68, 227, 255, 0.2);
     border: none;
     font-size: 1.15rem;
+    margin-bottom: 1vh;
     font-family: inherit;
 }
 #contact input{
     border-radius: 1.5vh;
 }
-#contact input[type="email"]{
+#contact input[type="email"], #contact input[type="text"]{
     width: 80%;
     text-indent: 1.5vh;
     margin-left: auto;
