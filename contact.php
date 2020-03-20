@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_POST['submit'])){
-    $subject = $_POST['subject'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+if(isset($_GET['submit'])){
+    $subject = $_GET['subject'];
+    $email = $_GET['email'];
+    $message = $_GET['message'];
     $mymail = 'paw.por@wp.pl';
     $headers = "From: $email";
     $txt = "You have received an email from $email.\n\n$message";
