@@ -104,6 +104,11 @@ nav span {
   transition: all 0.5s ease;
 }
 
+.nonactivenav ul, .nonactivenav #lang {
+  display: none;
+  opacity: 0;
+}
+
 .activenav {
   background-color: #009999;
   -webkit-box-sizing: border-box;
@@ -118,6 +123,8 @@ nav span {
   right: 10%;
   opacity: 0;
   overflow: auto;
+  display: flex;
+  flex-direction: row;
   -webkit-margin-before: 20px;
   margin-block-start: 20px;
 }
@@ -239,11 +246,6 @@ nav span {
 }
 .activenavmobile li {
   float: none;
-}
-
-.nonactivenav ul, .nonactivenav #lang {
-  display: none;
-  opacity: 0;
 }
 
 #titlesite {
