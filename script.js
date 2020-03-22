@@ -171,8 +171,7 @@ else {
 }
 const balls = [];
 for(i=0; i<100; i++){ //tworzy piłki
-    if(isMobile && i == 40) break;
-    balls.push([Math.ceil(Math.random()*width), Math.ceil(Math.random()*height), Math.ceil(Math.random()*80), "rgba(0,"+(Math.ceil(Math.random()*153)+102)+","+(Math.ceil(Math.random()*153)+102)+",0.2)", (Math.random()*2-1),(Math.random()*2-1)]);
+    balls.push([Math.ceil(Math.random()*width), Math.ceil(Math.random()*height), Math.ceil(Math.random()*80), "rgba(0,"+(Math.ceil(Math.random()*153)+102)+","+(Math.ceil(Math.random()*153)+102)+",0.3)", (Math.random()*2-1),(Math.random()*2-1)]);
 }
 window.addEventListener("resize", function(){ // w razie zmiany rozmiaru okna
     if(width < 1024 && window.innerWidth >=1024){
@@ -188,23 +187,25 @@ window.addEventListener("resize", function(){ // w razie zmiany rozmiaru okna
     if (!(isMobile)){
         width = window.innerWidth;
         height = window.innerHeight;
-        ctx.canvas.width  = window.innerWidth;
-        ctx.canvas.height = window.innerHeight;
-        balls.forEach(cell => {
-            if (cell[0] > window.innerWidth){
-                cell[0] = window.innerWidth % cell[0];
-            }
-            if (cell[1] > window.innerHeight){
-                cell[1] = window.innerHeight % cell[1];
-            }
-        });
-        windowFill();
     }
-    else {
+    else{
         let body = document.body,html = document.documentElement;
-        width = Math.max( body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth );
         height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        width = document.body.clientWidth;
+        c.style.width = width;
+        c.style.height = height;
     }
+    ctx.canvas.width  = width;
+    ctx.canvas.height = height;
+    balls.forEach(cell => {
+        if (cell[0] > width){
+            cell[0] = width % cell[0];
+        }
+        if (cell[1] > height){
+            cell[1] = height % cell[1];
+        }
+    });
+    windowFill();
 });
 function movement(){ // rusza piłki
     balls.forEach(cell => {
