@@ -2,7 +2,7 @@ $navColor: #009999;
 $chosenLanguageColor: #00c700;
 $skillBackground: rgba(68, 227, 255, 0.2);
 $textPlaceholderColor: rgba(68, 96, 255, 0.8);
-$backgroundOverlay: rgba(255,255,255, .7);
+$backgroundOverlay: rgba(255,255,255, .5);
 body{
     margin: 0;
     padding: 0;
@@ -26,10 +26,11 @@ header{
     top: 0;
     #sign{
         float: left;
-        margin-left: 5%;
-        h2{
-            width: 100px;
-            float: left;
+        margin-left: 1%;
+        margin-top: 1%;
+        width: 8rem;
+        img{
+            width:100%;
         }
     }
 }
@@ -299,39 +300,6 @@ nav{
                 width: 100%;
             }
         }
-    }
-}
-@media (max-width: 1500px){
-    #about #image{
-        padding-left: 0;
-        #img{
-            width: 85%;
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-}
-@media (max-width: 1300px){
-    #about #image #img{
-        width: 100%;
-    }
-}
-#aboutme{
-    display: block;
-    float:left;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 50%;
-    padding-left: 5%;
-    span{
-        font-weight: 800;
-        font-size: 1.5rem;
-        display: block;
-        text-align: center;
-    }
-    p{
-        text-indent: 5rem;
-        font-size: 1.2rem;
     }
 }
 #skills{
@@ -605,6 +573,9 @@ footer{
                 }
             }
         }
+        #sign{
+            width: 5rem;
+        }
     }
     #skills{
         .skill1, .skill2{
@@ -668,6 +639,39 @@ footer{
     }
     .heading{
         font-size: 3rem;
+    }
+}
+@media (max-width: 1500px){
+    #about #image{
+        padding-left: 0;
+        #img{
+            width: 85%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 1300px){
+    #about #image #img{
+        width: 100%;
+    }
+}
+#aboutme{
+    display: block;
+    float:left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 50%;
+    padding-left: 5%;
+    span{
+        font-weight: 800;
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+    }
+    p{
+        text-indent: 5rem;
+        font-size: 1.2rem;
     }
 }
 @media (max-width: 1800px){

@@ -24,11 +24,12 @@ header {
 }
 header #sign {
   float: left;
-  margin-left: 5%;
+  margin-left: 1%;
+  margin-top: 1%;
+  width: 8rem;
 }
-header #sign h2 {
-  width: 100px;
-  float: left;
+header #sign img {
+  width: 100%;
 }
 
 nav {
@@ -282,7 +283,7 @@ nav span {
   overflow: auto;
 }
 #about .wrapper {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #about #image {
   width: 50%;
@@ -303,40 +304,6 @@ nav span {
   width: 100%;
 }
 
-@media (max-width: 1500px) {
-  #about #image {
-    padding-left: 0;
-  }
-  #about #image #img {
-    width: 85%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (max-width: 1300px) {
-  #about #image #img {
-    width: 100%;
-  }
-}
-#aboutme {
-  display: block;
-  float: left;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 50%;
-  padding-left: 5%;
-}
-#aboutme span {
-  font-weight: 800;
-  font-size: 1.5rem;
-  display: block;
-  text-align: center;
-}
-#aboutme p {
-  text-indent: 5rem;
-  font-size: 1.2rem;
-}
-
 #skills {
   margin-left: auto;
   margin-right: auto;
@@ -344,7 +311,7 @@ nav span {
   overflow: auto;
   margin-top: 15vh;
   font-size: 1.6rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #skills .skill1 {
   display: block;
@@ -389,7 +356,7 @@ nav span {
   margin-top: 15vh;
   margin-bottom: 15vh;
   font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #projects #second-row .project:nth-child(1) {
   margin-left: 20%;
@@ -473,7 +440,7 @@ nav span {
   width: 60%;
   overflow: auto;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #contact #contact-wrapper {
   float: left;
@@ -604,6 +571,9 @@ footer #scrollup {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+  header #sign {
+    width: 5rem;
+  }
 
   #skills .skill1, #skills .skill2 {
     min-height: 10vh;
@@ -669,6 +639,40 @@ footer #scrollup {
     font-size: 3rem;
   }
 }
+@media (max-width: 1500px) {
+  #about #image {
+    padding-left: 0;
+  }
+  #about #image #img {
+    width: 85%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 1300px) {
+  #about #image #img {
+    width: 100%;
+  }
+}
+#aboutme {
+  display: block;
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 5%;
+}
+#aboutme span {
+  font-weight: 800;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+}
+#aboutme p {
+  text-indent: 5rem;
+  font-size: 1.2rem;
+}
+
 @media (max-width: 1800px) {
   #projects #first-row .project {
     width: 40%;

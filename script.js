@@ -46,9 +46,26 @@ document.querySelector("#hamburger").addEventListener("click", function(){
         }
     }
 });
+function clean(node){
+  for(var n = 0; n < node.childNodes.length; n ++){
+    var child = node.childNodes[n];
+    if(child.nodeType === 8 || (child.nodeType === 3 && !/\S/.test(child.nodeValue))){
+      node.removeChild(child);
+      n --;
+    }
+    else if(child.nodeType === 1){
+      clean(child);
+    }
+  }
+}
+clean(document.body);
+const plVersion = ["Made by 5ZYSZ3K","Strona główna","O mnie","Poznane technologie","Projekty","Kontakt","en"," / ","pl","<CZEŚĆ />","Paweł Poręba - portfolio","O MNIE", "Opis", "Nazywam się Paweł Poręba.","Mam osiemnaście lat i uczęszczam do klasy trzeciej profilu informatycznego Zespołu Szkół Elektryczno-Mechanicznych im. gen. Józefa Kustronia w Nowym Sączu.","Zacząłem programować trzy lata temu, a od półtora roku staram się robić to regularnie. Na początku uczyłem się w C++, a kiedy opanowałem jego podstawy postanowiłem dodać do nauki kolejno HTML, CSS, JavaScript (wraz z React), Javy (przede wszystkim Android Studio), PHP oraz MySQL.","POZNANE TECHNOLOGIE","Znam składnię HTML, umiem zbudować strukturę strony","Znam technologię CSS, umiem stworzyć responsywną stronę internetową","Potrafię pisać style w SASS, korzystam ze zmiennych, mixins i innych rozwiązań oferowanych przez tą technologię","Znam JavaScript w stopniu średnio","zaawansowanym, potrafię napisać nieco bardziej skomplikowane skrypty do strony internetowej","Znam podstawy React, ciągle się uczę tej technologii","Znam składnię języka Java, korzystałem z niej głównie przy projektach tworzonych w Android Studio","Potrafię tworzyć aplikacje na Androida z wykorzystaniem narzędzia Android Studio","Znam język PHP, umiem napisać podstawowe skrypty backendowe","Umiem zarządzać bazami danych MySQL, oraz pisać kwerendy w języku SQL","Posiadam dyplom z zaawansowanego administrowania systemem Linix Ubuntu Desktop oraz z skryptów powłoki w zarządzaniu systemami operacyjnymi","Korzystam z podstawowych narzędzi oferowanych przez system kontroli wersji Git","PROJEKTY","Mój pierwszy projekt - Tetris","Wykorzystane technologie i narzędzia: ","HTML, CSS, JavaScript, PHP, MySQL","Live","Repozytorium","Tetris 3D, stworzony na szkolny konkurs aplikacji w C#, w którym zająłem 3 miejsce","Wykorzystane technologie i narzędzia: ","Unity, C#","Repozytorium","Projekt mojego portfolio","Wykorzystane technologie i narzędzia: ","HTML, CSS, JavaScript, PHP","Repozytorium","Aplikacja Guess The Footballer na androida","Wykorzystane technologie i narzędzia: ","Java, Android Studio","Repozytorium","Zdalnie sterowany pojazd, stworzony razem z bratem","Wykorzystane technologie i narzędzia: ","C","Pobierz plik","KONTAKT","Check my media:"];
+const enVersion = ["Made by 5ZYSZ3K","Home","About me","Learned technologies","Projects","Contact","en"," / ","pl","<HELLO />","Paweł Poręba - portfolio","ABOUT ME", "Description", "My name's Paweł Poręba.","I'm eighteen years old and I'm a 3rd grade IT student at Zespół Szkół Elektryczno-Mechanicznych im. gen. Józef Kustroń in Nowy Sącz, Poland.","I've started programing 3 years ago and I've been doing it regulary for a year and a half. At first I learned C++, and then HTML, CSS, JavaScript (React), Java (Android Studio), PHP and MySQL","LEARNED TECHNOLOGIES","I know HTML syntax, I can build a website structure","I know CSS, I can create a responsive website","I can create styles in SASS, I can use variables, mixins and other solutions provided by this technology","I know JavaScript at an inter","mediate level, I can write a bit more complicated scripts for a website","I know the basics of React, I'm still learning this technology","I know the Java language syntax, I used it mainly for projects created in Android Studio","I can create Android applications using the Android Studio","I know PHP, I can write basic backend scripts","I can manage MySQL databases and write queries in SQL","I have a diploma in advanced administration of Linux Ubuntu Desktop and shell scripts in operating system management","I use the basic tools offered by the Git version control system","PROJECTS","My first project - Tetris","Technologies and tools used: ","HTML, CSS, JavaScript, PHP, MySQL","Live","Repository","Tetris 3D, created for a school competition in c#, in which i took 3rd place","Technologies and tools used: ","Unity, C#","Repository","My portfolio","Technologies and tools used: ","HTML, CSS, JavaScript, PHP","Repository","Guess The Footballer application for android","Technologies and tools used: ","Java, Android Studio","Repository","A remote-controlled vehicle, created together with my brother","Technologies and tools used: ","C","Download the file","CONTACT","Check my media:"];
 function textNodesUnder(el){
     var n, a=[], walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null,false);
-    while(n=walk.nextNode()) a.push(n);
+    while(n=walk.nextNode()){
+        a.push(n);
+    }
     return a;
 }
 const nodes = textNodesUnder(document.body);
@@ -57,25 +74,18 @@ let langPrevState = false;
 document.getElementById('en').addEventListener('click', function(){
     if (!(langPrevState)){
         for(let i=0; i<nodes.length; i++){
-            nodes[i].nodeValue = i;
+            nodes[i].nodeValue = enVersion[i];
         }
         langPrevState = true;
     }
 });
 document.getElementById('pl').addEventListener('click', function(){
-    if (langPrevState){
+    //if (langPrevState){
         for(let i=0; i<nodes.length; i++){
-            nodes[i].nodeValue = i;
+            nodes[i].nodeValue = plVersion[i];
         }
         langPrevState = false;
-    }
-});
-document.getElementById('pl').addEventListener('click', function(){
-    if (!(langPrevState)){
-        for(let i=0; i<nodes.length; i++){
-            nodes[i].nodeValue = nodes.length-i;
-        }
-    }
+    //}
 });
 let skills = document.querySelectorAll('.skill');
 for (let i=0; i<skills.length; i++){
