@@ -206,6 +206,13 @@ nav{
         transition: width .3s;
     }
 }
+.buttonin{
+    position: relative;
+    display: inline-block;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
 .activenavmobile{
     height: 96vh;
     text-align: center;
@@ -223,9 +230,6 @@ nav{
             -ms-transform: translate(-50%);
                 transform: translate(-50%);
         overflow: auto;
-    }
-    .buttonin{
-        display: block;
     }
     ul{
         position: relative;
@@ -293,7 +297,7 @@ nav{
         padding-right: 10%;
         padding-left: 5%;
         #img{
-            width: 70%;
+            width: 80%;
             margin-left: auto;
             margin-right: auto;
             img{
@@ -431,13 +435,6 @@ nav{
     font-weight: bold;
     text-align: center;
     font-size: 1rem;
-    .buttonin{
-        position: relative;
-        display: inline-block;
-        overflow: auto;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 #contact{
     width: 60%;
@@ -506,8 +503,29 @@ footer{
         position: relative;
         float: right;
         bottom: 0px;
-        Width: 50px;
+        width: 50px;
         height: 50px;
+    }
+    .buttonin a{
+        font-weight: 800;
+        text-decoration: none;
+        color: inherit;
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            -webkit-transition: width .3s;
+            -o-transition: width .3s;
+            transition: width .3s;
+        }
+        &:hover::after{
+            width: 100%;
+            -webkit-transition: width .3s;
+            -o-transition: width .3s;
+            transition: width .3s;
+        }
     }
 }
 @media(max-width: 1350px){
@@ -585,6 +603,12 @@ footer{
                 width: 30%;
             }
         }
+        .skill1{
+            border-bottom-right-radius: 7vh;
+        }
+        .skill2{
+            border-bottom-left-radius: 7vh;
+        }
     }
     .wrapper{
         width: 80%;
@@ -604,6 +628,9 @@ footer{
             padding-left: 0;
             margin-left: auto;
             margin-right: auto;
+            span{
+                
+            }
             p{
                 text-indent: 0;
             }
@@ -645,7 +672,7 @@ footer{
     #about #image{
         padding-left: 0;
         #img{
-            width: 85%;
+            width: 100%;
             margin-left: 0;
             margin-right: 0;
         }
@@ -653,7 +680,7 @@ footer{
 }
 @media (max-width: 1300px){
     #about #image #img{
-        width: 100%;
+        width: 120%;
     }
 }
 #aboutme{
@@ -668,8 +695,11 @@ footer{
         font-size: 1.5rem;
         display: block;
         text-align: center;
+        margin-top: 0;
     }
     p{
+        margin-top: 0;
+        margin-bottom: 0.5rem;
         text-indent: 5rem;
         font-size: 1.2rem;
     }
@@ -706,9 +736,15 @@ footer{
     }
 }
 @media (max-width: 470px){
-    #titlesite #div2 span{
-        font-size: 2.5rem;
-    }
+    #titlesite #div2{
+        span{
+            font-size: 2.5rem;
+        } 
+        p{
+            font-size: 1rem;
+        }
+    } 
+
 }
 @media (max-width: 700px){
     #projects{
@@ -730,7 +766,7 @@ footer{
         }
     }
     .heading{
-        font-size: 2.25rem;
+        font-size: 1.95rem;
     }
     #skills{
         font-size: 1rem;

@@ -203,6 +203,14 @@ nav span {
   transition: width 0.3s;
 }
 
+.buttonin {
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .activenavmobile {
   height: 96vh;
   text-align: center;
@@ -221,9 +229,6 @@ nav span {
   -ms-transform: translate(-50%);
   transform: translate(-50%);
   overflow: auto;
-}
-.activenavmobile .buttonin {
-  display: block;
 }
 .activenavmobile ul {
   position: relative;
@@ -296,7 +301,7 @@ nav span {
   padding-left: 5%;
 }
 #about #image #img {
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -428,13 +433,6 @@ nav span {
   text-align: center;
   font-size: 1rem;
 }
-.button .buttonin {
-  position: relative;
-  display: inline-block;
-  overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 #contact {
   width: 60%;
@@ -505,8 +503,29 @@ footer #scrollup {
   position: relative;
   float: right;
   bottom: 0px;
-  Width: 50px;
+  width: 50px;
   height: 50px;
+}
+footer .buttonin a {
+  font-weight: 800;
+  text-decoration: none;
+  color: inherit;
+}
+footer .buttonin a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+footer .buttonin a:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 @media (max-width: 1350px) {
@@ -582,6 +601,12 @@ footer #scrollup {
     height: auto;
     width: 30%;
   }
+  #skills .skill1 {
+    border-bottom-right-radius: 7vh;
+  }
+  #skills .skill2 {
+    border-bottom-left-radius: 7vh;
+  }
 
   .wrapper {
     width: 80%;
@@ -644,14 +669,14 @@ footer #scrollup {
     padding-left: 0;
   }
   #about #image #img {
-    width: 85%;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
 }
 @media (max-width: 1300px) {
   #about #image #img {
-    width: 100%;
+    width: 120%;
   }
 }
 #aboutme {
@@ -667,8 +692,11 @@ footer #scrollup {
   font-size: 1.5rem;
   display: block;
   text-align: center;
+  margin-top: 0;
 }
 #aboutme p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   text-indent: 5rem;
   font-size: 1.2rem;
 }
@@ -702,6 +730,9 @@ footer #scrollup {
   #titlesite #div2 span {
     font-size: 2.5rem;
   }
+  #titlesite #div2 p {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 700px) {
   #projects #first-row .project:nth-child(1) {
@@ -718,7 +749,7 @@ footer #scrollup {
   }
 
   .heading {
-    font-size: 2.25rem;
+    font-size: 1.95rem;
   }
 
   #skills {
@@ -738,5 +769,3 @@ footer #scrollup {
     font-size: 1.5rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
