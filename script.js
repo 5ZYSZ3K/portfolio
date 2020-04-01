@@ -202,8 +202,8 @@ else {
     ctx.canvas.height = height;
 }
 const balls = [];
-for(i=0; i<100; i++){ //tworzy piłki
-    balls.push([Math.ceil(Math.random()*width), Math.ceil(Math.random()*height), Math.ceil(Math.random()*80), "rgba(0,"+(Math.ceil(Math.random()*153)+102)+","+(Math.ceil(Math.random()*153)+102)+",0.3)", (Math.random()*2-1),(Math.random()*2-1)]);
+for(i=0; i<50; i++){ //tworzy piłki
+    balls.push([Math.ceil(Math.random()*width), Math.ceil(Math.random()*height), Math.ceil(Math.random()*80), "rgba(0,"+(Math.ceil(Math.random()*153)+102)+","+(Math.ceil(Math.random()*153)+102)+",0.2)", (Math.random()*2-1),(Math.random()*2-1)]);
 }
 window.addEventListener("resize", function(){ // w razie zmiany rozmiaru okna
     if(width < 1050 && window.innerWidth >=1050){
@@ -225,7 +225,7 @@ window.addEventListener("resize", function(){ // w razie zmiany rozmiaru okna
         height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
         width = document.body.clientWidth;
         c.style.width = width;
-        c.style.height = height;
+        c.style.height = document.body.clientHeight;
     }
     ctx.canvas.width  = width;
     ctx.canvas.height = height;
@@ -269,9 +269,9 @@ function movement(){ // rusza piłki
     windowFill();
 }
 windowFill();
-if(!(isMobile)) {
-    const it = setInterval(movement, 3);
+if (!isMobile) {
+    const it = setInterval(movement, 15);
 }
-else{ 
+else{
     const it = setInterval(movement, 30);
 }

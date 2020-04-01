@@ -2,7 +2,6 @@ $navColor: #009999;
 $chosenLanguageColor: #00c700;
 $skillBackground: rgba(68, 227, 255, 0.2);
 $textPlaceholderColor: rgba(68, 96, 255, 0.8);
-$backgroundOverlay: rgba(255,255,255, .5);
 body{
     margin: 0;
     padding: 0;
@@ -284,9 +283,6 @@ nav{
 }
 #about{
     overflow: auto;
-    .wrapper{
-        background-color: $backgroundOverlay;
-    }
     #image{
         width: 50%;
         -webkit-box-sizing: border-box;
@@ -310,43 +306,58 @@ nav{
     margin-left: auto;
     margin-right: auto;
     width: 60vw;
-    overflow: auto;
+    overflow: hidden;
     margin-top: 15vh;
     font-size: 1.6rem;
-    background-color: $backgroundOverlay;
+    .svgp{
+        height: 15vh;
+        overflow: auto;
+        display: inline-table;
+    }
     .skill1{
-        display: block;
         width: 60%;
-        margin-top: 3vh;
-        min-height: 20vh;
+        margin-top: 6vh;
+        min-height: 15vh;
         float: left;
         text-align: left;
         background-color: $skillBackground;
         border-bottom-right-radius: 10vh;
         svg{
-            height: 20vh;
-            top: 5%;
+            height: 15vh;
             left: 2px;
-            bottom: 5%;
+            float: left;
+        }
+        .svgp{
+            float: left;
+        }
+        p{
             float: left;
         }
     }
     .skill2{
-        display: block;
         float:right;
         width: 60%;
-        min-height: 20vh;
+        min-height: 15vh;
         text-align: right;
-        margin-top: 3vh;
+        margin-top: 6vh;
         background-color: $skillBackground;
         border-bottom-left-radius: 10vh;
-        svg{
-            height: 20vh;
-            top: 5%;
-            right: 2px;
-            bottom: 5%;
+        .svgp{
             float: right;
         }
+        svg{
+            height: 15vh;
+            right: 2px;
+            float: right;
+        }
+        p{
+            float: right;
+        }
+    }
+    p{
+        width: 70%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
 }
 #projects{
@@ -357,7 +368,6 @@ nav{
     margin-top: 15vh;
     margin-bottom: 15vh;
     font-size: 1.2rem;
-    background-color: $backgroundOverlay;
     #second-row{
         .project{
             &:nth-child(1){
@@ -440,7 +450,6 @@ nav{
     width: 60%;
     overflow: auto;
     margin: auto;
-    background-color: $backgroundOverlay;
     #contact-wrapper{
         float: left;
         width: 500px;
@@ -597,10 +606,18 @@ footer{
     }
     #skills{
         .skill1, .skill2{
-            min-height: 10vh;
-            svg{
-                height: auto;
+            min-height: 5vh;
+            .svgp{
+                margin-top: 1em;
                 width: 30%;
+                height: auto;
+            }
+            svg{
+                width: 100%;
+                height: auto;
+            }
+            p{
+                width: 63%;
             }
         }
         .skill1{
@@ -628,9 +645,6 @@ footer{
             padding-left: 0;
             margin-left: auto;
             margin-right: auto;
-            span{
-                
-            }
             p{
                 text-indent: 0;
             }

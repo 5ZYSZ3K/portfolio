@@ -287,9 +287,6 @@ nav span {
 #about {
   overflow: auto;
 }
-#about .wrapper {
-  background-color: rgba(255, 255, 255, 0.5);
-}
 #about #image {
   width: 50%;
   -webkit-box-sizing: border-box;
@@ -313,44 +310,59 @@ nav span {
   margin-left: auto;
   margin-right: auto;
   width: 60vw;
-  overflow: auto;
+  overflow: hidden;
   margin-top: 15vh;
   font-size: 1.6rem;
-  background-color: rgba(255, 255, 255, 0.5);
+}
+#skills .svgp {
+  height: 15vh;
+  overflow: auto;
+  display: inline-table;
 }
 #skills .skill1 {
-  display: block;
   width: 60%;
-  margin-top: 3vh;
-  min-height: 20vh;
+  margin-top: 6vh;
+  min-height: 15vh;
   float: left;
   text-align: left;
   background-color: rgba(68, 227, 255, 0.2);
   border-bottom-right-radius: 10vh;
 }
 #skills .skill1 svg {
-  height: 20vh;
-  top: 5%;
+  height: 15vh;
   left: 2px;
-  bottom: 5%;
+  float: left;
+}
+#skills .skill1 .svgp {
+  float: left;
+}
+#skills .skill1 p {
   float: left;
 }
 #skills .skill2 {
-  display: block;
   float: right;
   width: 60%;
-  min-height: 20vh;
+  min-height: 15vh;
   text-align: right;
-  margin-top: 3vh;
+  margin-top: 6vh;
   background-color: rgba(68, 227, 255, 0.2);
   border-bottom-left-radius: 10vh;
 }
-#skills .skill2 svg {
-  height: 20vh;
-  top: 5%;
-  right: 2px;
-  bottom: 5%;
+#skills .skill2 .svgp {
   float: right;
+}
+#skills .skill2 svg {
+  height: 15vh;
+  right: 2px;
+  float: right;
+}
+#skills .skill2 p {
+  float: right;
+}
+#skills p {
+  width: 70%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 #projects {
@@ -361,7 +373,6 @@ nav span {
   margin-top: 15vh;
   margin-bottom: 15vh;
   font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 #projects #second-row .project:nth-child(1) {
   margin-left: 20%;
@@ -438,7 +449,6 @@ nav span {
   width: 60%;
   overflow: auto;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 #contact #contact-wrapper {
   float: left;
@@ -595,11 +605,19 @@ footer .buttonin a:hover::after {
   }
 
   #skills .skill1, #skills .skill2 {
-    min-height: 10vh;
+    min-height: 5vh;
+  }
+  #skills .skill1 .svgp, #skills .skill2 .svgp {
+    margin-top: 1em;
+    width: 30%;
+    height: auto;
   }
   #skills .skill1 svg, #skills .skill2 svg {
+    width: 100%;
     height: auto;
-    width: 30%;
+  }
+  #skills .skill1 p, #skills .skill2 p {
+    width: 63%;
   }
   #skills .skill1 {
     border-bottom-right-radius: 7vh;
@@ -769,3 +787,5 @@ footer .buttonin a:hover::after {
     font-size: 1.5rem;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
