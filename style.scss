@@ -540,14 +540,38 @@ footer {
     }
   }
 }
-@media (max-width: 1350px) {
-  #skills {
+@media (max-width: 1650px) {
+  #container #skills {
     width: 80%;
     margin-top: 5vh;
-    .skill1,
-    .skill2 {
+    .skill {
       width: 90%;
       height: auto;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  #skills {
+    .skill {
+      min-height: 5vh;
+      .svgp {
+        margin-top: 1em;
+        width: 30%;
+        height: auto;
+      }
+      svg {
+        width: 100%;
+        height: auto;
+      }
+      p {
+        width: 63%;
+      }
+    }
+    .skill:nth-child(even) {
+      border-bottom-right-radius: 7vh;
+    }
+    .skill:nth-child(odd) {
+      border-bottom-left-radius: 7vh;
     }
   }
 }
@@ -606,29 +630,6 @@ footer {
     }
     #sign {
       width: 5rem;
-    }
-  }
-  #skills {
-    .skill {
-      min-height: 5vh;
-      .svgp {
-        margin-top: 1em;
-        width: 30%;
-        height: auto;
-      }
-      svg {
-        width: 100%;
-        height: auto;
-      }
-      p {
-        width: 63%;
-      }
-    }
-    .skill:nth-child(even) {
-      border-bottom-right-radius: 7vh;
-    }
-    .skill:nth-child(odd) {
-      border-bottom-left-radius: 7vh;
     }
   }
   .wrapper {

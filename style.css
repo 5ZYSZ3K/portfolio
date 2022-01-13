@@ -547,15 +547,37 @@ footer .buttonin a:hover::after {
   transition: width 0.3s;
 }
 
-@media (max-width: 1350px) {
-  #skills {
+@media (max-width: 1650px) {
+  #container #skills {
     width: 80%;
     margin-top: 5vh;
   }
-  #skills .skill1,
-#skills .skill2 {
+  #container #skills .skill {
     width: 90%;
     height: auto;
+  }
+}
+@media (max-width: 1200px) {
+  #skills .skill {
+    min-height: 5vh;
+  }
+  #skills .skill .svgp {
+    margin-top: 1em;
+    width: 30%;
+    height: auto;
+  }
+  #skills .skill svg {
+    width: 100%;
+    height: auto;
+  }
+  #skills .skill p {
+    width: 63%;
+  }
+  #skills .skill:nth-child(even) {
+    border-bottom-right-radius: 7vh;
+  }
+  #skills .skill:nth-child(odd) {
+    border-bottom-left-radius: 7vh;
   }
 }
 @media (max-width: 1050px) {
@@ -612,28 +634,6 @@ footer .buttonin a:hover::after {
   }
   header #sign {
     width: 5rem;
-  }
-
-  #skills .skill {
-    min-height: 5vh;
-  }
-  #skills .skill .svgp {
-    margin-top: 1em;
-    width: 30%;
-    height: auto;
-  }
-  #skills .skill svg {
-    width: 100%;
-    height: auto;
-  }
-  #skills .skill p {
-    width: 63%;
-  }
-  #skills .skill:nth-child(even) {
-    border-bottom-right-radius: 7vh;
-  }
-  #skills .skill:nth-child(odd) {
-    border-bottom-left-radius: 7vh;
   }
 
   .wrapper {
