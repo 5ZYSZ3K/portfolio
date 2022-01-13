@@ -200,7 +200,6 @@ function textNodesUnder(el) {
   return a;
 }
 const nodes = textNodesUnder(document.body);
-console.log(nodes);
 let langPrevState = false;
 document.getElementById("en").addEventListener("click", function () {
   if (!langPrevState) {
