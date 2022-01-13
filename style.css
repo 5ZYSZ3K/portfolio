@@ -105,7 +105,8 @@ nav span {
   transition: all 0.5s ease;
 }
 
-.nonactivenav ul, .nonactivenav #lang {
+.nonactivenav ul,
+.nonactivenav #lang {
   display: none;
   opacity: 0;
 }
@@ -319,7 +320,7 @@ nav span {
   overflow: auto;
   display: inline-table;
 }
-#skills .skill1 {
+#skills .skill:nth-child(even) {
   width: 60%;
   margin-top: 6vh;
   min-height: 15vh;
@@ -328,18 +329,18 @@ nav span {
   background-color: rgba(68, 227, 255, 0.2);
   border-bottom-right-radius: 10vh;
 }
-#skills .skill1 svg {
+#skills .skill:nth-child(even) svg {
   height: 15vh;
   left: 2px;
   float: left;
 }
-#skills .skill1 .svgp {
+#skills .skill:nth-child(even) .svgp {
   float: left;
 }
-#skills .skill1 p {
+#skills .skill:nth-child(even) p {
   float: left;
 }
-#skills .skill2 {
+#skills .skill:nth-child(odd) {
   float: right;
   width: 60%;
   min-height: 15vh;
@@ -348,15 +349,15 @@ nav span {
   background-color: rgba(68, 227, 255, 0.2);
   border-bottom-left-radius: 10vh;
 }
-#skills .skill2 .svgp {
+#skills .skill:nth-child(odd) .svgp {
   float: right;
 }
-#skills .skill2 svg {
+#skills .skill:nth-child(odd) svg {
   height: 15vh;
   right: 2px;
   float: right;
 }
-#skills .skill2 p {
+#skills .skill:nth-child(odd) p {
   float: right;
 }
 #skills p {
@@ -454,7 +455,8 @@ nav span {
   float: left;
   width: 500px;
 }
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
   display: block;
   background-color: rgba(68, 227, 255, 0.2);
   border: none;
@@ -462,28 +464,35 @@ nav span {
   margin-bottom: 1vh;
   font-family: inherit;
 }
-#contact input:focus, #contact textarea:focus {
+#contact input:focus,
+#contact textarea:focus {
   outline: none;
 }
-#contact input::-webkit-input-placeholder, #contact textarea::-webkit-input-placeholder {
+#contact input::-webkit-input-placeholder,
+#contact textarea::-webkit-input-placeholder {
   color: rgba(68, 96, 255, 0.8);
 }
-#contact input::-moz-placeholder, #contact textarea::-moz-placeholder {
+#contact input::-moz-placeholder,
+#contact textarea::-moz-placeholder {
   color: rgba(68, 96, 255, 0.8);
 }
-#contact input:-ms-input-placeholder, #contact textarea:-ms-input-placeholder {
+#contact input:-ms-input-placeholder,
+#contact textarea:-ms-input-placeholder {
   color: rgba(68, 96, 255, 0.8);
 }
-#contact input::-ms-input-placeholder, #contact textarea::-ms-input-placeholder {
+#contact input::-ms-input-placeholder,
+#contact textarea::-ms-input-placeholder {
   color: rgba(68, 96, 255, 0.8);
 }
-#contact input::placeholder, #contact textarea::placeholder {
+#contact input::placeholder,
+#contact textarea::placeholder {
   color: rgba(68, 96, 255, 0.8);
 }
 #contact input {
   border-radius: 1.5vh;
 }
-#contact input[type=email], #contact input[type=text] {
+#contact input[type=email],
+#contact input[type=text] {
   width: 80%;
   text-indent: 1.5vh;
   margin-left: auto;
@@ -543,7 +552,8 @@ footer .buttonin a:hover::after {
     width: 80%;
     margin-top: 5vh;
   }
-  #skills .skill1, #skills .skill2 {
+  #skills .skill1,
+#skills .skill2 {
     width: 90%;
     height: auto;
   }
@@ -604,25 +614,25 @@ footer .buttonin a:hover::after {
     width: 5rem;
   }
 
-  #skills .skill1, #skills .skill2 {
+  #skills .skill {
     min-height: 5vh;
   }
-  #skills .skill1 .svgp, #skills .skill2 .svgp {
+  #skills .skill .svgp {
     margin-top: 1em;
     width: 30%;
     height: auto;
   }
-  #skills .skill1 svg, #skills .skill2 svg {
+  #skills .skill svg {
     width: 100%;
     height: auto;
   }
-  #skills .skill1 p, #skills .skill2 p {
+  #skills .skill p {
     width: 63%;
   }
-  #skills .skill1 {
+  #skills .skill:nth-child(even) {
     border-bottom-right-radius: 7vh;
   }
-  #skills .skill2 {
+  #skills .skill:nth-child(odd) {
     border-bottom-left-radius: 7vh;
   }
 
@@ -682,19 +692,18 @@ footer .buttonin a:hover::after {
     font-size: 3rem;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1700px) {
   #about #image {
     padding-left: 0;
   }
   #about #image #img {
     width: 100%;
     margin-left: 0;
-    margin-right: 0;
   }
 }
 @media (max-width: 1300px) {
   #about #image #img {
-    width: 120%;
+    width: 130%;
   }
 }
 #aboutme {
@@ -759,7 +768,8 @@ footer .buttonin a:hover::after {
   #projects #first-row .project:nth-child(3) {
     float: left;
   }
-  #projects #first-row .project, #projects #second-row .project {
+  #projects #first-row .project,
+#projects #second-row .project {
     margin-left: 0;
     margin-right: 0;
     width: 100%;
