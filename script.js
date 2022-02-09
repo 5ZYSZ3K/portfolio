@@ -74,7 +74,7 @@ const plVersion = [
   "O MNIE",
   "Opis",
   "Nazywam się Paweł Poręba.",
-  "Mam dwadzieścia lat i jestem na pierwszym roku studiów, na kierunku Mikro- i Nanotechnolgoie w Biofizyce, w Akadami Górniczo-Hutniczej w Krakowie. ",
+  "Mam dwadzieścia lat i jestem na pierwszym roku studiów, na kierunku Mikro- i Nanotechnologie w Biofizyce, w Akademi Górniczo-Hutniczej w Krakowie. ",
   "Zacząłem programować pięć lat temu, a odtrzech lat staram się robić to regularnie. Na początku uczyłem się w C++, a kiedy opanowałem jego podstawy postanowiłem dodać do nauki kolejno HTML, CSS, JavaScript (wraz z React, React Native oraz Node.js), Javy (przede wszystkim Android Studio), PHP oraz MySQL. ",
   "Obecnie szukam stażu jako młodszy programista JavaScript",
   "POZNANE TECHNOLOGIE",
